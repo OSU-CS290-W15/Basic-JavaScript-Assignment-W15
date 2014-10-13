@@ -18,7 +18,7 @@ Instructions
       - src
       - tests
 - **You are only allowed to modify the files in the src directory.**
-  - The comments in the files in the src directorys describe the intended behaviour of the functions that you need to fill in. Please ask on Piazza if you are confused about the intended functionality of any function.
+  - The comments in the files in the src directory describe the intended behavior of the functions that you need to fill in. Please ask on Piazza if you are confused about the intended functionality of any function.
   - Within those files, your code should go between the `//your code here` comments.
   - You should replace `return undefined;` with appropriate return statements.
 - To test your code open the `qunit_runner.html` web page locally.
