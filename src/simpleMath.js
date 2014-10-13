@@ -17,7 +17,7 @@ SimpleMath.prototype.getFactorial = function(number) {
   else {
     return undefined;
   }
-  //End your code
+  //end your code
 };
 
 /**

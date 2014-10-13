@@ -12,12 +12,10 @@ function variableModification(a) {
   var plus5;
   var asString;
   var asStringWithFoo;
-
-  /*
-  your Code Here
-  */
+  //your code here
 
   return [plus5, asString, asStringWithFoo, a];
+  //end your code
 }
 
 /*
@@ -28,10 +26,9 @@ Output:
 return true if b is a primitive string value, false otherwise
 */
 function isString(b) {
-  /*
-  Your Code Here
-  */
+  //your code here
   return undefined;
+  //end your code
 }
 
 /*
@@ -42,10 +39,7 @@ Output:
 return true if c is undefined, false otherwise
 */
 function isUndefined(c) {
-  /*
-  Your Code Here
-  */
-  //Begin key
+  //your code here
   return undefined;
-  //End key
+  //end your code
 }

@@ -80,15 +80,15 @@ test("variableModification tests", function( assert ){
 
 test("isString tests", function( assert ){
 	assert.ok(isString('foo bar'),'Identifies a string.');
-	assert.ok(!isString(42),'Rejects a number.');
-	assert.ok(!isString(null),'Rejects null.');
-	assert.ok(!isString(new String('foo')),'Rejects string object.');
+	assert.strictEqual(isString(42),false,'Rejects a number.');
+	assert.strictEqual(isString(null),false,'Rejects null.');
+	assert.strictEqual(isString(new String('foo')),false,'Rejects string object.');
 });
 
 test("isUndefined tests", function( assert ){
 	assert.ok(isUndefined(undefined),'Identifies undefined.');
-	assert.ok(!isUndefined(42),'Rejects a number.');
-	assert.ok(!isUndefined(null),'Rejects null.');
-	assert.ok(!isUndefined(NaN),'Rejects NaN.');
-	assert.ok(!isUndefined(new String('foo')),'Rejects string object.');
+	assert.strictEqual(isUndefined(42),false,'Rejects a number.');
+	assert.strictEqual(isUndefined(null),false,'Rejects null.');
+	assert.strictEqual(isUndefined(NaN),false,'Rejects NaN.');
+	assert.strictEqual(isUndefined(new String('foo')),false,'Rejects string object.');
 });
