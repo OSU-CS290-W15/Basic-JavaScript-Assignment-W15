@@ -3,7 +3,9 @@ Basic JavaScript Assignment
 
 This assignment will cover fundamental JavaScript topics outside the context of web development. Core concepts like objects, variables and functions will be covered. Fully automated tests will be provided for all assignment components.
 
-**As of right now the assignment is not complete, there will be additional files added that you need to complete. However, the tests and code for the variables.js and simpleMath.js are stable so you can get to work on them immediately.**
+~~**As of right now the assignment is not complete, there will be additional files added that you need to complete. However, the tests and code for the variables.js and simpleMath.js are stable so you can get to work on them immediately.**~~
+
+**Extra work to get an A is not required for this assignment, simply passing all tests will get you an A**
 
 Instructions
 ------------
