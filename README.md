@@ -18,7 +18,9 @@ Instructions
       - src
       - tests
 - **You are only allowed to modify the files in the src directory.**
+  - The comments in the files in the src directory describe the intended behavior of the functions that you need to fill in. Please ask on Piazza if you are confused about the intended functionality of any function.
   - Within those files, your code should go between the `//your code here` comments.
   - You should replace `return undefined;` with appropriate return statements.
 - To test your code open the `qunit_runner.html` web page locally.
+  - Given the nature of automated tests, it is easy to see what the expected values are and simply hard code those returns. If you do this for any portion of the assignment, you will get a 0 for the whole assignment. (For example, variableModification should work for any value, not just 42, but we are only testing the value 42. If you hardcode the values `47`, `'42'` and `'42foo'` that is a violation of this rule. )
       
