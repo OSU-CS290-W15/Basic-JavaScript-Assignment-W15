@@ -26,9 +26,22 @@ Instructions
 - To test your code open the `qunit_runner.html` web page locally.
   - Given the nature of automated tests, it is easy to see what the expected values are and simply hard code those returns. If you do this for any portion of the assignment, you will get a 0 for the whole assignment. (For example, variableModification should work for any value, not just 42, but we are only testing the value 42. If you hardcode the values `47`, `'42'` and `'42foo'` that is a violation of this rule. )
 
-**Advanced:**
+**CLI Testing (Advanced)**
 
-To run qunit tests outside the browser, firt install [Node.js](http://nodejs.org), then install Grunt by running `npm install -g grunt-cli`. Then install Node.js dependencies by running `npm install`, and finally run `grunt test`.
+To run qunit tests via the command line:
+
+**Method 1:**
+
+ first install [Node.js](http://nodejs.org), then install Grunt by running `npm install -g grunt-cli`. Then install Node.js dependencies by running `npm install`, and finally run `grunt test`.
 
 Note: If you forked this repository before Thu Oct 23, you have to manually add `package.json` and `Gruntfile.js` to your assignment3 folder (or use git!)
 
+**Method 2:**
+
+Install PhantomJS binary: http://phantomjs.org/download.html
+
+Run the following command from ROOT directory of repository:
+
+`phantomjs run_qunit.js assignment3/qunit_runner.html | grep assertions`
+
+Example output: 47 assertions of 47 passed, 0 failed.
