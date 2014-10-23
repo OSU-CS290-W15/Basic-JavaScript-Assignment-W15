@@ -25,4 +25,10 @@ Instructions
   - You should replace `return undefined;` with appropriate return statements.
 - To test your code open the `qunit_runner.html` web page locally.
   - Given the nature of automated tests, it is easy to see what the expected values are and simply hard code those returns. If you do this for any portion of the assignment, you will get a 0 for the whole assignment. (For example, variableModification should work for any value, not just 42, but we are only testing the value 42. If you hardcode the values `47`, `'42'` and `'42foo'` that is a violation of this rule. )
-      
+
+**Advanced:**
+
+To run qunit tests outside the browser, firt install [Node.js](http://nodejs.org), then install Grunt by running `npm install -g grunt-cli`. Then install Node.js dependencies by running `npm install`, and finally run `grunt test`.
+
+Note: If you forked this repository before Thu Oct 23, you have to manually add `package.json` and `Gruntfile.js` to your assignment3 folder (or use git!)
+
