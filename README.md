@@ -9,9 +9,11 @@ In order to be eligible to receive an A you must submit a work log. It will not 
 
 The format is as follows:
 
+```
 Start: Wed, 7 Jan 2015 21:42:26 -0800
 End: Wed, 7 Jan 2015 22:42:26 -0800
 Tasks: During this period I drew a diagram of the classes I will be using to implement the message passing portion of the assignment.
+```
 
 You can get most of this information from the git log if you run:
 `git log --pretty=format:"%h %ad \"%s\"" --date=rfc`
