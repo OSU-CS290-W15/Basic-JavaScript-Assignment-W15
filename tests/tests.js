@@ -6,6 +6,7 @@ BEGIN variable tests
 module ("Variables and Types");
 test("variableModification tests", function( assert ){
 	var out = variableModification( 6 );
+	assert.expect( 7 );
 	assert.equal(typeof out[0], 'number', 'plus5 is a number.');
 	assert.equal(out[0], 11, 'Does multiply by 5.');
 	assert.equal(typeof out[1], 'string', 'asString is a string.');
@@ -16,6 +17,7 @@ test("variableModification tests", function( assert ){
 });
 
 test("isString tests", function( assert ){
+	assert.expect( 4 );
 	assert.ok(isString('foo bar'),'Identifies a string.');
 	assert.ok(!isString(42),'Rejects a number.');
 	assert.ok(!isString(null),'Rejects null.');
@@ -23,6 +25,7 @@ test("isString tests", function( assert ){
 });
 
 test("isNull tests", function( assert ){
+	assert.expect( 5 );
 	assert.ok(isNull(null),'Identifies null.');
 	assert.ok(!isUndefined(42),'Rejects a number.');
 	assert.ok(!isUndefined(undefined),'Rejects undefined.');
@@ -39,14 +42,16 @@ BEGIN function tests
 */
 module("functions");
 test("uselessFunction tests", function(assert){
+	assert.expect( 1 );
 	assert.ok(uselessFunction() === null, 'uselessFunction returns null.');
 });
 test("bar function tests",function(assert){
+	assert.expect( 4 );
 	assert.equal(barType, 'string','bar was at one point not a function');
 
 	var a = [1.5,1,5];
 	var result = bar(a);
-	assert.ok(result,'Returns success on valid input.')
+	assert.ok(result,'Returns success on valid input.');
 	assert.deepEqual(a, [3,2,10], 'Correctly doubles array contents.');
 	try{
 		var result = false;
@@ -59,12 +64,13 @@ test("bar function tests",function(assert){
 			result = true;
 		}
 	}
-	assert.strictEqual(result, true,'Correctly handles non-numbers.')
+	assert.strictEqual(result, true,'Correctly handles non-numbers.');
 });
 
 test("parseGit function tests",function(assert){
-	var logs = ['3782618 Wed, 7 Jan 2015 21:42:26 -0800 "Initial commit"','c314332 Wed, 7 Jan 2015 22:02:38 -0800 "Add empty bio.md"']
-	var logsParsed = [new GitLog('3782618', new Date('Wed, 7 Jan 2015 21:42:26 -0800'), "Initial commit" ), new GitLog('c314332', new Date('Wed, 7 Jan 2015 22:02:38 -0800'), "Add empty bio.md" )]
+	assert.expect( 7 );
+	var logs = ['3782618 Wed, 7 Jan 2015 21:42:26 -0800 "Initial commit"','c314332 Wed, 7 Jan 2015 22:02:38 -0800 "Add empty bio.md"'];
+	var logsParsed = [new GitLog('3782618', new Date('Wed, 7 Jan 2015 21:42:26 -0800'), "Initial commit" ), new GitLog('c314332', new Date('Wed, 7 Jan 2015 22:02:38 -0800'), "Add empty bio.md" )];
 	assert.ok(typeof parseGit == 'function', 'parseGit function exists.');
 	var result = parseGit(logs);
 	assert.equal(result[0].hash,logsParsed[0].hash,'Properly parses hash 0.');
@@ -86,22 +92,25 @@ module("Objects", {
 			this.testLog = new MessageLog('TesterMcGee');
 		}
 		catch(e){
-			console.log("Error creating MessageLog.")
+			console.log("Error creating MessageLog.");
 		}
 	}
 });
 
 test("returnObjectLiteral tests", function(assert){
+	assert.expect( 2 );
 	assert.equal(typeof returnObjectLiteral, 'function', 'returnObjectLiteral function exists');
 	assert.deepEqual(returnObjectLiteral(), {'type':'Goldfish','brand':'Pepperidge Farm','flavor':'Cheddar','count':2000}, 'Returns the correct object.');
 });
 
 test("MessageLog constructor tests", function(assert){
+	assert.expect( 2 );
 	assert.equal(typeof MessageLog, 'function', 'MessageLog constructor exists.');
-	assert.equal(typeof new MessageLog('foo'), 'object', 'Constructor constructs an object.')
+	assert.equal(typeof new MessageLog('foo'), 'object', 'Constructor constructs an object.');
 });
 
 test("MessageLog instance tests", function(assert){
+	assert.expect( 7 );
 	this.testLog.logMessage('I 0', 1);
 	assert.equal(this.testLog.lastReceivedMessage(),'I 1','Records 1 received message.');
 	assert.equal(this.testLog.totalReceived(),1,'Count reflects 1 received message.');
@@ -122,6 +131,7 @@ test("MessageLog instance tests", function(assert){
 });
 
 test("Student instance",function(assert){
+	assert.expect( 1 );
 	assert.equal(myLog.totalReceived(), 3,'myLog received 3 messages.');
 });
 /*
