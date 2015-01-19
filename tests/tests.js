@@ -8,12 +8,12 @@ test("variableModification tests", function( assert ){
 	var out = variableModification( 6 );
 	assert.expect( 7 );
 	assert.equal(typeof out[0], 'number', 'plus5 is a number.');
-	assert.equal(out[0], 11, 'Does multiply by 5.');
+	assert.equal(out[0], 11, 'Does add 5.');
 	assert.equal(typeof out[1], 'string', 'asString is a string.');
 	assert.equal(out[1], '6', 'asString is the right string.');
 	assert.equal(typeof out[2], 'string', 'asStringFoo is a string.');
 	assert.equal(out[2], 'Your Number is 6', 'asStringFoo is appended with \'foo\'.');
-	assert.strictEqual(out[3], 42, 'a was not modified.');
+	assert.strictEqual(out[3], 6, 'a was not modified.');
 });
 
 test("isString tests", function( assert ){
