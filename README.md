@@ -37,5 +37,6 @@ Instructions
   - The comments in the files in the src directory describe the intended behavior of the functions that you need to fill in. Please ask on the discussion boards if you are confused about the intended functionality of any function.
   - Within those files, your code should go between the `//your code here` comments.
   - You should replace `return undefined;` with appropriate return statements.
+- Add **OSU-CS290-Tester** as a collaborator. This will be an account that myself and the TAs share to access your repos.
 - To test your code open the `qunit_runner.html` web page locally. Along with the red errors check for statements saying something like `Expected 4 assertions, but 2 were run`. This means that the test had to abort early due to a error it could not recover from. That means there are two additional tests that are not even getting run.
   - Given the nature of automated tests, it is easy to see what the expected values are and simply hard code those returns. If you do this for any portion of the assignment, you will get a 0 for the whole assignment. (For example, variableModification should work for any value, not just 42, but we are only testing the value 42. If you hardcode the values `47`, `'42'` and `'42foo'` that is a violation of this rule. )
