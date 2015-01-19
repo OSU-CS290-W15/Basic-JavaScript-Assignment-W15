@@ -4,7 +4,7 @@
 * brand: {string} 'Pepperidge Farm'
 * flavor: {string} 'Cheddar'
 * count: {number} 2000
-* It should be returned direcly by the following function
+* It should be returned directly by the following function
 * @return {object} - the object literal
 */
 
@@ -15,23 +15,25 @@ function returnObjectLiteral() {
 }
 
 /**
-* Create a constructor function for a `Cat` object.
+* Create a constructor function for a `MessageLog` object.
 * @constructor
-* @param {string} name - The name of the cat as a string
-* @param {string} color - The color of the cat
-* The above values should be stored and be accessable via the name and color
-* properties respectively. In addition, the following methods should be
-* callable on a Cat object:
-* destroyFurniture({string} name, {number} cost) - adds a piece of destroyed
-* furnature
-* lastDestroyedFurniture() - returns a object with two key value pairs with
-* keys 'name' and 'cost' and values corrisponding to the name and cash money
-* value of the last item destroyed.
-* totalDestroyed() - returns a {number} that is the total value of destroyed
-* furnature.
-* nthDestroyed( {number} n ) - Returns the nth destroyed furnature. 0 should
-* return the first item destroyed, 1 the second and so on. It should return it
-* as an object just as lasatDestroyedFurniture does.
+* @param {string} user - The user associated to the message log
+* The string indicating the user should be stored in the user property of the
+* object instances. In addition, the following methods should be
+* callable on a MessageLog object:
+* logMessage( {string} messageText, {number} direction) - This should log a message
+* as either being sent or received. A direction of 0 indicates it is a message
+* the user sent. A direction of 1 indicates it is a message the user received.
+* Behavior for other numbers is undefined.
+* lastReceivedMessage() - returns the message text of the last message the user
+* received.
+* getSentMessage({number} n) - returns as a string, the content of the nth most
+* recently sent message. To conserve memory, the object should only keep the
+* last 5 message. n=0 retrieves the most recent n=4 retrieves the least recent 
+* of the 5.
+* totalSent() - returns an integer indicating the total number of messages sent
+* totalReceived() - returns an integer indicating the total number of messages
+* received
 */
 
 //your code here
@@ -39,23 +41,22 @@ function returnObjectLiteral() {
 //end your code
 
 /**
-* Create an instance of a 'Orange' cat with the name 'Maru' stored in a variable
-* called myCat. Call the destroyFurniture function on at least $1000 of
-* furniture.
+* Add a method to the MessageLog prototype called systemReceived().
+* This method should return the total number of messages received for all
+* instances of message logs. So if you have logs A and B, A has received
+* 3 messages, B has received 8. systemReceived() should return 11. You
+* may need to do more than simply add a method to make this functionality
+* work.
 */
-
 //your code here
 
 //end your code
 
 /**
-* Add a method to the cat prototype called 'pet'. This function should accept
-* a {number} n as an argument. If that {number} is greater than 2.5 it should
-* return the {string} 'CLAW!' if that {number} is less than or equal to 2.5
-* it should return the {string} 'Purr.'.
-* @param {number} n - The number of pets
-* @return {string} - The cats reaction.
+* Create an instance of a `MessageLog` for the user "BlackHatGuy". Have the
+* instance receive 3 messages: "foo", "bar" and "baz", received in that order.
 */
+
 //your code here
 
 //end your code
