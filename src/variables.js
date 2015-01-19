@@ -24,7 +24,7 @@ Input:
 b: could be anything
 
 Output:
-return true if b is a primitive string value (also known as a string literal), 
+return true if b is a primitive string value (also known as a string literal),
 false otherwise
 */
 function isString(b) {

@@ -36,14 +36,14 @@ var barType = typeof bar;
 /**
 * Creates a new GitLog
 * @class
-* @prop {string} hash - the hash of the commit
-* @prop {Date} date - the date of the commit as a JS Date object
-* @prop {string} message - the commit message
+* @property {string} hash - the hash of the commit
+* @property {Date} date - the date of the commit as a JS Date object
+* @property {string} message - the commit message
 */
 function GitLog(hash, date, message) {
-	this.hash = hash;
-	this.date = date;
-	this.message = message;
+    this.hash = hash;
+    this.date = date;
+    this.message = message;
 }
 
 /**
@@ -57,9 +57,10 @@ function GitLog(hash, date, message) {
 * and the first " of the commit message.
 *
 * You will covert these into GitLog objects with the following properties:
-* 
 *
-* @param {array.<string>} logArray - an array of Git commit messages of the above
+*
+* @param {array.<string>} logArray - an array of Git commit messages of the
+* above
 * format.
 * @return {array.<GitLog>} - return an array GitLog instances
 */
