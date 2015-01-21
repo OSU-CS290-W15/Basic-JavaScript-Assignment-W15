@@ -13,11 +13,17 @@ The format is as follows:
 Start: Wed, 7 Jan 2015 21:42:26 -0800
 End: Wed, 7 Jan 2015 22:42:26 -0800
 Tasks: During this period I drew a diagram of the classes I will be using to implement the message passing portion of the assignment.
+
+Start: Fri, 9 Jan 2015 18:00:00 -0800
+End: Fri, 9 Jan 2015 20:42:26 -0800
+Tasks: During this period I debugged for 1 hour to find a type and implement the send function of the cleint.
 ```
 
 You can get most of this information from the git log if you run:
 `git log --pretty=format:"%h %ad \"%s\"" --date=rfc`
 You just need to fill in the Start: time. Use the same date format. I would suggest copying and pasting the End time and just editing the time (or day if you went through midnight in a work session).
+
+Have one entry per work session.
 
 Put this log in log.txt.
 
