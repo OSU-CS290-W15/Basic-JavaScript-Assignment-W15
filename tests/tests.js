@@ -27,10 +27,10 @@ test("isString tests", function( assert ){
 test("isNull tests", function( assert ){
 	assert.expect( 5 );
 	assert.ok(isNull(null),'Identifies null.');
-	assert.ok(!isUndefined(42),'Rejects a number.');
-	assert.ok(!isUndefined(undefined),'Rejects undefined.');
-	assert.ok(!isUndefined(NaN),'Rejects NaN.');
-	assert.ok(!isUndefined(new String('foo')),'Rejects string object.');
+	assert.ok(!isNull(42),'Rejects a number.');
+	assert.ok(!isNull(undefined),'Rejects undefined.');
+	assert.ok(!isNull(NaN),'Rejects NaN.');
+	assert.ok(!isNull(new String('foo')),'Rejects string object.');
 });
 
 /*

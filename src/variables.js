@@ -3,7 +3,7 @@ Input:
 a: a whole, positive number
 
 Output:
-plus5: a number that is the product of 5 and `a`
+plus5: a number that is the sum of 5 and `a`
 asString: a string that is just `a` converted to a string
 yourNumberIs: a string that says "Your Number is `x`." where `x` is replaced by
 in input `a`
