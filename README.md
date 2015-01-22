@@ -20,7 +20,7 @@ Tasks: During this period I debugged for 1 hour to find a type and implement the
 ```
 
 You can get most of this information from the git log if you run:
-`git log --pretty=format:"%h %ad \"%s\"" --date=rfc`
+`git log --pretty=format:"Start: %nEnd: %ad %nTasks: %s" --date=rfc`
 You just need to fill in the Start: time. Use the same date format. I would suggest copying and pasting the End time and just editing the time (or day if you went through midnight in a work session).
 
 Have one entry per work session.
