@@ -12,7 +12,7 @@ test("variableModification tests", function( assert ){
 	assert.equal(typeof out[1], 'string', 'asString is a string.');
 	assert.equal(out[1], '6', 'asString is the right string.');
 	assert.equal(typeof out[2], 'string', 'asStringFoo is a string.');
-	assert.equal(out[2], 'Your Number is 6', 'asStringFoo is appended with \'foo\'.');
+	assert.equal(out[2], 'Your Number is 6', 'Approprate string is returned.');
 	assert.strictEqual(out[3], 6, 'a was not modified.');
 });
 
